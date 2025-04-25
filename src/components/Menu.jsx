@@ -1,6 +1,7 @@
-import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";   
+import { AppBar, Box, Button, Toolbar, Switch } from "@mui/material";   
 import { useNavigate } from 'react-router-dom'
 import React from "react";
+import { useColorMode } from '../contexts/ColorModeContext'
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -10,6 +11,7 @@ const navItems = [
 
 const Menu = () => {
   const navigate = useNavigate()
+  const colorMode = useColorMode()
 
   return (
     <Box sx={{ display: "flex"}}>
@@ -20,6 +22,8 @@ const Menu = () => {
               {item.label}
             </Button>
           ))}
+          <Box sx={{flexGrow: 1}}></Box>
+          <Switch onClick={() => colorMode.toggleColorMode()} />
         </Toolbar>
       </AppBar>
     </Box>
