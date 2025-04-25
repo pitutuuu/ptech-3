@@ -4,3 +4,5 @@ Start with:
 - installing Node.js
 - npm install
 - npm install @mui/material @emotion/react @emotion/styled @mui/icons-material axios react-router-dom
+
+To run the project just type: npm start
